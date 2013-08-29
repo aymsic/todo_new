@@ -11,6 +11,7 @@ gem 'simple_form'
 gem 'jquery-rails'
 gem 'rails_autolink'
 gem 'ey_config'
+gem 'phrase'
 
 group :assets do
   gem 'sass-rails'
