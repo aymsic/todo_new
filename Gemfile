@@ -11,12 +11,15 @@ gem 'simple_form'
 gem 'jquery-rails'
 gem 'rails_autolink'
 gem 'ey_config'
-gem 'phrase'
 
 group :assets do
   gem 'sass-rails'
   gem 'coffee-rails'
   gem 'uglifier'
+end
+
+group :staging do
+  gem 'phrase'
 end
 
 platform :ruby do
