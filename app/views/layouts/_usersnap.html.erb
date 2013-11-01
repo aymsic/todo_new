@@ -1,0 +1,27 @@
+<%
+apikey = ""
+begin
+  apikey = EY::Config.get(:usersnap, 'api_key')
+rescue
+  puts "Cannot retrieve Usersnap api_key from config."
+end
+%>
+<script type="text/javascript">
+   var _usersnapconfig = {
+       apiKey: "<%= apikey %>",
+       valign: 'bottom',
+       halign: 'right',
+       tools: ["pen", "highlight", "note"],
+       lang: 'en',
+       commentBox: true,
+       emailBox: true
+   };
+   (function() {
+       var s = document.createElement('script');
+       s.type = 'text/javascript';
+       s.async = true;
+       s.src = '//api.usersnap.com/usersnap.js';
+       var x = document.getElementsByTagName('head')[0];
+       x.appendChild(s);
+   })();
+</script>
